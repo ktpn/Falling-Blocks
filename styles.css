@@ -1,0 +1,160 @@
+html {
+    background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
+    background-size: 500% 500%;
+    animation: backgroundGradient 15s ease infinite;
+}
+
+h3, p, h5 {
+    text-align: center;
+    font-family: helvetica, sans-serif, arial;
+    color: white;
+    margin-top: 0;
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+.wave {
+    height: 100px;
+    margin-top: 2em;
+    font-size: 45px;
+    font-weight: 950;
+    font-family: helvetica, sans-serif, arial;
+    text-align: center;
+    color: white;
+    
+}
+
+.wave span {
+    display: inline-block;
+    -webkit-animation: wave-text 10s ease-in-out infinite;
+            animation: wave-text 10s ease-in-out infinite;
+}
+
+.musicText {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+
+button {
+    font-family: helvetica, sans-serif, arial;
+    font-size: 18px;
+    border-radius: 7px;
+    border: none;
+    padding: 5px;
+    width: 7em;
+    background-color: white;
+}
+
+
+button:hover {
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    animation: slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 400px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.tetromino {
+    background-color: green;
+}
+
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.mini-grid div {
+    height: 20px;
+    width: 20px;
+}
+
+
+
+@keyframes backgroundGradient {
+    0% {background-position: 0% 0%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 0%;}
+
+}
+
+@-webkit-keyframes wave-text {
+    00% {transform: translateY(0em);}
+    60% {transform: translateY(-0.9em);}
+    100% {transform: translateY(0em);}
+  }
+   
+@keyframes wave-text {
+    00% {transform: translateY(0em);}
+    60% {transform: translateY(-0.9em);}
+    100% {transform: translateY(0em);}
+  }
+
+ .red:hover {
+    color: red;
+    animation: rotate360 2s linear;
+ }
+
+  .blue:hover {
+    color: blue;
+    animation: rotate360 2s linear;
+  }
+
+  .green:hover {
+    color: green;
+    animation: rotate360 2s linear;
+  }
+
+  .yellow:hover {
+    color: yellow;
+    animation: rotate360 2s linear;
+  }
+
+  .purple:hover {
+    color: purple;
+    animation: rotate360 2s linear;
+  }
+
+  @keyframes rotate360 {
+    to {transform: rotate(360deg) scale(2)}
+  }
